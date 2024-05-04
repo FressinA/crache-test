@@ -1,5 +1,6 @@
+/* Styles de base pour le corps et les conteneurs */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -12,9 +13,9 @@ body {
 .container {
     background: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    width: 350px;
+    width: 300px;
 }
 
 h1 {
@@ -22,7 +23,7 @@ h1 {
     color: #333;
 }
 
-.form-group {
+.form-group, .input-group {
     margin-bottom: 20px;
 }
 
@@ -34,7 +35,8 @@ label {
 
 input[type="text"],
 input[type="password"],
-input[type="submit"] {
+input[type="submit"],
+button {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -42,7 +44,8 @@ input[type="submit"] {
     box-sizing: border-box; /* Include padding and border in the element's width and height */
 }
 
-input[type="submit"] {
+input[type="submit"],
+button {
     background-color: #5c67f2;
     color: white;
     font-size: 16px;
@@ -51,14 +54,18 @@ input[type="submit"] {
     transition: background-color 0.3s;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+button:hover {
     background-color: #4a54e1;
 }
 
-/* Adding a little bit of responsiveness */
-@media (max-width: 400px) {
-    .container {
-        width: 90%;
-        padding: 10px;
-    }
+/* Styles spécifiques pour les liens dans les boutons */
+button a {
+    color: white; /* Assure que le texte du lien est blanc */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+    display: block; /* Fait en sorte que le lien occupe toute la surface du bouton */
+}
+
+button a:hover {
+    color: #ddd; /* Couleur du lien au survol */
 }
