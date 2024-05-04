@@ -1,0 +1,74 @@
+/* Styles généraux pour la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #222;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Styles des boîtes de jeux */
+.game {
+    position: relative;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 520px; /* largeur totale incluant l'image */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.game-box h2 {
+    margin-top: 0;
+}
+
+.game-right .game-box img {
+    align-self: flex-end;
+    position: absolute;
+    top: -350;     /* Alignement en haut */
+    right: -60;   /* Alignement à droite */
+    width: auto; /* Ajustement pour la largeur automatique */
+    height: auto;
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur du conteneur */
+}
+
+/* Alternance de la disposition des boîtes de jeux */
+.game-left {
+    align-self: flex-start; /* Alignement à gauche */
+}
+
+/* Styles des étoiles de notation */
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.star {
+    font-size: 25px;
+    cursor: pointer;
+    color: #ccc; /* Couleur grise pour les étoiles non sélectionnées */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: gold; /* Change la couleur lors du survol */
+}
+
+/* CSS pour étoiles sélectionnées via JavaScript */
+.star.selected {
+    color: gold; /* Couleur dorée pour les étoiles sélectionnées */
+}
