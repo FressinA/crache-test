@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Inscription</h2>
+        <form action="submit_form.php" method="POST">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <input type="submit" value="S'inscrire">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
